@@ -318,9 +318,9 @@ configuration:
     # a backup storage location will be created with the name "default". Optional.
   - name:
     # provider is the name for the backup storage location provider.
-    provider:
+    provider: aws
     # bucket is the name of the bucket to store backups in. Required.
-    bucket:
+    bucket: velero-k8s-backup-malav
     # caCert defines a base64 encoded CA bundle to use when verifying TLS connections to the provider. Optional.
     caCert:
     # prefix is the directory under which all Velero data should be stored within the bucket. Optional.
@@ -339,8 +339,8 @@ configuration:
       key:
     # Additional provider-specific configuration. See link above
     # for details of required/optional fields for your provider.
-    config: {}
-    #  region:
+    config:
+      region: ap-south-1
     #  s3ForcePathStyle:
     #  s3Url:
     #  kmsKeyId:
