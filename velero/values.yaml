@@ -624,7 +624,17 @@ nodeAgent:
 #       - persistentVolumeClaims
 #       excludedClusterScopedResources:
 #       - persistentVolumes
-schedules: {}
+schedules:
+  k8s-backup:
+    disabled: false
+    schedule: "*/10 * * * *"
+    useOwnerReferencesInBackup: false
+    paused: false
+    template:
+      ttl: "240h"
+      storageLocation: default
+      includedNamespaces:
+      - blue-green
 
 # Velero ConfigMaps.
 # Eg:
