@@ -627,7 +627,7 @@ nodeAgent:
 schedules:
   k8s-backup:
     disabled: false
-    schedule: "*/5 * * * *"
+    schedule: "* * * * 1"
     useOwnerReferencesInBackup: false
     paused: false
     template:
