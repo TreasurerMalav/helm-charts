@@ -334,9 +334,9 @@ configuration:
     accessMode: ReadWrite
     credential:
       # name of the secret used by this backupStorageLocation.
-      name:
+      name: credentials-velero
       # name of key that contains the secret data to be used.
-      key:
+      key: cloud
     # Additional provider-specific configuration. See link above
     # for details of required/optional fields for your provider.
     config:
@@ -368,9 +368,9 @@ configuration:
     provider: aws
     credential:
       # name of the secret used by this volumeSnapshotLocation.
-      name:
+      name: credentials-velero
       # name of key that contains the secret data to be used.
-      key:
+      key: cloud
     # Additional provider-specific configuration. See link above
     # for details of required/optional fields for your provider.
     config:
