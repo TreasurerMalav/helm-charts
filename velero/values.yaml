@@ -363,7 +363,7 @@ configuration:
   # See https://velero.io/docs/v1.6/api-types/volumesnapshotlocation/
   volumeSnapshotLocation:
     # name is the name of the volume snapshot location where snapshots are being taken. Required.
-  - name: velero-k8s-backup-bucket-malav
+  - name: default
     # provider is the name for the volume snapshot provider.
     provider: aws
     credential:
