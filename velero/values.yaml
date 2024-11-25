@@ -627,11 +627,12 @@ nodeAgent:
 schedules:
   k8s-backup:
     disabled: false
-    schedule: "0 0 * * 1"
+    # schedule: "0 0 * * 1"
+    schedule: "*/10 * * * *"
     useOwnerReferencesInBackup: false
     paused: false
     template:
-      ttl: "240h"
+      ttl: "24h"
       storageLocation: aws-backup
       includedNamespaces:
       - blue-green
