@@ -624,19 +624,19 @@ nodeAgent:
 #       - persistentVolumeClaims
 #       excludedClusterScopedResources:
 #       - persistentVolumes
-schedules:
-  k8s-backup:
-    disabled: false
-    # schedule: "0 0 * * 1"
-    # schedule: "*/10 * * * *"
-    schedule: "10 */1 * * *"
-    useOwnerReferencesInBackup: false
-    paused: false
-    template:
-      ttl: "24h"
-      storageLocation: aws-backup
-      includedNamespaces:
-      - blue-green
+schedules: {}
+  # k8s-backup:
+  #  disabled: false
+  #  # schedule: "0 0 * * 1"
+  #  # schedule: "*/10 * * * *"
+  #  schedule: "10 */1 * * *"
+  #  useOwnerReferencesInBackup: false
+  #  paused: false
+  #  template:
+  #    ttl: "24h"
+  #    storageLocation: aws-backup
+  #    includedNamespaces:
+  #    - blue-green
 
 # Velero ConfigMaps.
 # Eg:
